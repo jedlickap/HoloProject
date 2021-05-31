@@ -1,0 +1,16 @@
+Luzula pilosa	Luzula pilosa
+Luzula elegans	Luzula elegans
+Oryza sativa	Oryza sativa
+Secale cereale	Secale cereale
+Carex acutiformis	Carex acutiformis
+Cyperus papyrus	Cyperus papyrus
+Eleocharis uniglumis var. sternerii	Eleocharis uniglumis var. sternerii
+Drosera capensis	Drosera capensis
+Drosera filiformis var. tracyi	Drosera filiformis var. tracyi
+Nepenthes ventricosa	Nepenthes ventricosa
+Drosophyllum lusitanicum	Drosophyllum lusitanicum
+Rumex acetosa	Rumex acetosa
+Rumex alpinus	Rumex alpinus
+Chamaelirium luteum	Chamaelirium luteum
+Paris quadrifolia	Paris quadrifolia
+
