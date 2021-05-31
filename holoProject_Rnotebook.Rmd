@@ -461,6 +461,41 @@ tab$assemler[tab$assembler == "wtdbg"] <- "wtdbg2"
 tab[,c(1,2,4,6:12)]
 
 ```
+<br>
+
+#### Flye genome assembly comparison with Os-Nipponbare-Reference-IRGSP-1.0
+
+> [MUMmer](https://mummer4.github.io/): a system for rapidly aligning entire genomes
+
+```{bash eval=FALSE}
+~/Documents/Soft/mummer/nucmer -p nucmerAlign IRGSP-1.0_genome.fasta Osat_flye_assembly.fasta
+~/Documents/Soft/mummer/dnadiff -d nucmerAlign.delta
+~/Documents/Soft/mummer/mummerplot -l nucmerAlign.delta
+
+# filter coordinates for Ribbon visualization
+cat out.1coords | cut -f 1,2,3,4,5,6,7,8,9,12,13 > out_for_ribbon.1coords
+cat out.mcoords | cut -f 1,2,3,4,5,6,7,8,9,12,13 > out_for_ribbon.mcoords
+
+cat out.mcoords | cut -f 1,2,3,4,5,6,7,8,9,12,13 | head
+1244	12042	10602	21384	10799	10783	95.93	43270923	53731	chr01	contig_4247
+12145	44923	21384	53731	32779	32348	97.93	43270923	53731	chr01	contig_4247
+27895	27978	58454	58537	84	84	100.00	43270923	169368	chr01	contig_1987
+44125	46854	2665	1	2730	2665	90.39	43270923	139529	chr01	contig_3868
+46353	54453	243025	250984	8101	7960	92.76	43270923	405317	chr01	contig_1301
+50824	66551	51959	36442	15728	15518	97.01	43270923	51959	chr01	contig_4723
+66383	66678	219651	219359	296	293	86.84	43270923	233972	chr01	contig_1596
+67259	103694	35777	1	36436	35777	96.41	43270923	51959	chr01	contig_4723
+98493	103348	37	4703	4856	4667	90.33	43270923	50883	chr01	contig_1903
+118081	127998	82173	72748	9918	9426	88.06	43270923	146834	chr01	contig_1124
+```
+<br>
+
+
+> Visualization in [Ribbon](https://www.biorxiv.org/content/biorxiv/suppl/2016/10/20/082123.DC1/082123-1.pdf)
+
+![*O. sativa* flye assembly aligned to nipponbare IRGSP-1.0 genome - overview](Images/RibbonViz/osat_flyes_mummerComp_ribbon_v3.png)
+
+![*O. sativa* flye assembly aligned to nipponbare IRGSP-1.0 genome - zoom of long contig](Images/RibbonViz/osat_flyes_mummerComp_ribbon_readZoom.png)
 
 <br><br>
 
