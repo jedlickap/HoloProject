@@ -490,12 +490,28 @@ cat out.mcoords | cut -f 1,2,3,4,5,6,7,8,9,12,13 | head
 ```
 <br>
 
+> [dotPlotly visualization](https://github.com/tpoorten/dotPlotly)
+
+![*O. sativa* flye assembly aligned to nipponbare IRGSP-1.0 genome - dotPlotly overview](Images/nucmerAlign_showCoords_dotPlotly_out_7inches.png)
+
+<br>
 
 > Visualization in [Ribbon](https://www.biorxiv.org/content/biorxiv/suppl/2016/10/20/082123.DC1/082123-1.pdf)
 
 ![*O. sativa* flye assembly aligned to nipponbare IRGSP-1.0 genome - overview](Images/RibbonViz/osat_flyes_mummerComp_ribbon_v3.png)
 
 ![*O. sativa* flye assembly aligned to nipponbare IRGSP-1.0 genome - zoom of long contig](Images/RibbonViz/osat_flyes_mummerComp_ribbon_readZoom.png)
+
+<br><br>
+
+
+#### *O. sativa* flye genome assembly comparison fast versus hac basecaller config
+
+![*O. sativa* query statistics of Mummer mapping to nipponbare reference](Tables/osat_flyes_mummerComp_fast_hac_reportSummary.png){width=60%}
+
+<br><br>
+
+![*O. sativa* dotPlotly alignment to nipponbare reference](Images/dotPlotly_fastVShac_comparison.jpg)
 
 <br><br>
 
@@ -1308,4 +1324,66 @@ dev.off()
 
 
 <br><br>
+
+### RepeatExplorer - comparative analysis
+
+> 300000 read pairs per plant
+> 221bp read length for all reads
+
+#### Comparative analysis summary
+
+![RE - comparative analysis summary](Images/RE_compAnalysis/comparative_summary.png)
+
+<br>
+
+#### Proportion of annotated repeats
+
+![Repeat proportion](Images/RE_compAnalysis/repeat_proportion_compAnal_overview.png)
+
+<br>
+
+#### Principal component analysis
+
+
+```{r eval=FALSE}
+> head(t_df_noZero)
+             LPIL LELE OSAT SCER CACU CPAP EUNI DCAP DFIL NVEN DLUS RACE RALP CLUT PQUA
+1|10|plastid 3294  441   58   43   36  122   22  141   43  109   33   33  255  265   22
+1|11|plastid    9    4   58   48    2    3    0  671  212  628  220  154 1385 1357  164
+1|16|plastid  821  107  135   67  130  323   40  568  172  240   81   74  695  523   61
+1|18|plastid  139   22   34   23  675  256   14 1534  559   78   30   19  162  152   15
+1|21|plastid  703   79  107   68   82  249   22  286   87  253   64   83  591  504   83
+1|23|plastid  717   99   97   85  124  260   39  132   53  239   92   67  555  498   80
+```
+
+
+![PCA analysis - all of 268 superclusters](Images/RE_compAnalysis/forPCA.tsv_factorExtra_biplot_PCAplot_v1.png)
+
+
+![no plastids](Images/RE_compAnalysis/noPlastids_factorExtra_biplot_PCAplot_v1.png)
+
+
+![Plastids](Images/RE_compAnalysis/plastid_factorExtra_biplot_PCAplot_v1.png)
+
+
+![All](Images/RE_compAnalysis/All_factorExtra_biplot_PCAplot_v1.png)
+
+
+![Angela](Images/RE_compAnalysis/Angela_factorExtra_biplot_PCAplot_v1.png)
+
+
+![Athila](Images/RE_compAnalysis/Athila_factorExtra_biplot_PCAplot_v1.png)
+
+![SIRE](Images/RE_compAnalysis/SIRE_factorExtra_biplot_PCAplot_v1.png)
+
+
+![Tekay](Images/RE_compAnalysis/Tekay_factorExtra_biplot_PCAplot_v1.png)
+
+
+![rDNA](Images/RE_compAnalysis/rDNA_factorExtra_biplot_PCAplot_v1.png)
+
+
+
+
+
 
